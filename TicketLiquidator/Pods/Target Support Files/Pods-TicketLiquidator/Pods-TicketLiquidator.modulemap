@@ -1,0 +1,6 @@
+framework module Pods_TicketLiquidator {
+  umbrella header "Pods-TicketLiquidator-umbrella.h"
+
+  export *
+  module * { export * }
+}

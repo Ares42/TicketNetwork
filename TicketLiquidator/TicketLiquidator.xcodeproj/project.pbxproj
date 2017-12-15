@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95468028221E84DBE1616A80 /* Pods_TicketLiquidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6072B8539ED688B7378F118 /* Pods_TicketLiquidator.framework */; };
+		A17F97A865347A89067C200D /* Pods_TicketLiquidatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C24BE1DD90FD2C0FE9FB57 /* Pods_TicketLiquidatorUITests.framework */; };
+		D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */; };
+		D5393CD71FE30E7E00B2A2F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */; };
+		D5393CDC1FE30E7E00B2A2F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5393CDB1FE30E7E00B2A2F3 /* Assets.xcassets */; };
+		D5393CDF1FE30E7E00B2A2F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5393CDD1FE30E7E00B2A2F3 /* LaunchScreen.storyboard */; };
+		D5393CEA1FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CE91FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift */; };
+		D5393CF51FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CF41FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift */; };
+		D5DE8A931FE34927004DADE9 /* TicketLiquidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A911FE34927004DADE9 /* TicketLiquidatorViewController.swift */; };
+		D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
+		D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */; };
+		D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */; };
+		D5DE8AA21FE34CE0004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
+		D5DE8AA31FE34CE0004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
+		DCBB834C71B9E9FEF3D6A8BB /* Pods_TicketLiquidatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6138DF6A1E1C03FEEC9EF82B /* Pods_TicketLiquidatorTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5393CE61FE30E7E00B2A2F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5393CC61FE30E7D00B2A2F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5393CCD1FE30E7E00B2A2F3;
+			remoteInfo = TicketLiquidator;
+		};
+		D5393CF11FE30E7E00B2A2F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5393CC61FE30E7D00B2A2F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5393CCD1FE30E7E00B2A2F3;
+			remoteInfo = TicketLiquidator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4001648EBBFCB5560F81C1C3 /* Pods-TicketLiquidatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidatorTests/Pods-TicketLiquidatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6138DF6A1E1C03FEEC9EF82B /* Pods_TicketLiquidatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketLiquidatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CC265C9B41AB55F99B969F /* Pods-TicketLiquidatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidatorTests/Pods-TicketLiquidatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8C24BE1DD90FD2C0FE9FB57 /* Pods_TicketLiquidatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketLiquidatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD65D715897D87CEE8C0B26 /* Pods-TicketLiquidatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidatorUITests/Pods-TicketLiquidatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B97FD256BA0E3FFC4903F545 /* Pods-TicketLiquidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidator.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator.release.xcconfig"; sourceTree = "<group>"; };
+		B9A4A3CE8A97277A0EC5E3EC /* Pods-TicketLiquidatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidatorUITests/Pods-TicketLiquidatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C04D9C272A68E7C933029E9A /* Pods-TicketLiquidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator.debug.xcconfig"; sourceTree = "<group>"; };
+		D5393CCE1FE30E7E00B2A2F3 /* TicketLiquidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketLiquidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5393CD61FE30E7E00B2A2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5393CDB1FE30E7E00B2A2F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5393CDE1FE30E7E00B2A2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5393CE01FE30E7E00B2A2F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5393CE51FE30E7E00B2A2F3 /* TicketLiquidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketLiquidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5393CE91FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorTests.swift; sourceTree = "<group>"; };
+		D5393CEB1FE30E7E00B2A2F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5393CF01FE30E7E00B2A2F3 /* TicketLiquidatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketLiquidatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5393CF41FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorUITests.swift; sourceTree = "<group>"; };
+		D5393CF61FE30E7E00B2A2F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5DE8A911FE34927004DADE9 /* TicketLiquidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorViewController.swift; sourceTree = "<group>"; };
+		D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
+		D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		E6072B8539ED688B7378F118 /* Pods_TicketLiquidator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketLiquidator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5393CCB1FE30E7E00B2A2F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95468028221E84DBE1616A80 /* Pods_TicketLiquidator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5393CE21FE30E7E00B2A2F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCBB834C71B9E9FEF3D6A8BB /* Pods_TicketLiquidatorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5393CED1FE30E7E00B2A2F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17F97A865347A89067C200D /* Pods_TicketLiquidatorUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0648462E94A5DF306E953247 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6072B8539ED688B7378F118 /* Pods_TicketLiquidator.framework */,
+				6138DF6A1E1C03FEEC9EF82B /* Pods_TicketLiquidatorTests.framework */,
+				A8C24BE1DD90FD2C0FE9FB57 /* Pods_TicketLiquidatorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5393CC51FE30E7D00B2A2F3 = {
+			isa = PBXGroup;
+			children = (
+				D5393CD01FE30E7E00B2A2F3 /* TicketLiquidator */,
+				D5393CE81FE30E7E00B2A2F3 /* TicketLiquidatorTests */,
+				D5393CF31FE30E7E00B2A2F3 /* TicketLiquidatorUITests */,
+				D5393CCF1FE30E7E00B2A2F3 /* Products */,
+				ECF0325E7B4B5BADB532E626 /* Pods */,
+				0648462E94A5DF306E953247 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D5393CCF1FE30E7E00B2A2F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5393CCE1FE30E7E00B2A2F3 /* TicketLiquidator.app */,
+				D5393CE51FE30E7E00B2A2F3 /* TicketLiquidatorTests.xctest */,
+				D5393CF01FE30E7E00B2A2F3 /* TicketLiquidatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5393CD01FE30E7E00B2A2F3 /* TicketLiquidator */ = {
+			isa = PBXGroup;
+			children = (
+				D5DE8A9B1FE3495E004DADE9 /* Controllers */,
+				D5DE8A9C1FE34965004DADE9 /* Helpers */,
+				D5DE8A9D1FE3496D004DADE9 /* Views */,
+				D5393D1A1FE30F6600B2A2F3 /* Storyboards */,
+				D5393CDB1FE30E7E00B2A2F3 /* Assets.xcassets */,
+				D5393CE01FE30E7E00B2A2F3 /* Info.plist */,
+				D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */,
+			);
+			path = TicketLiquidator;
+			sourceTree = "<group>";
+		};
+		D5393CE81FE30E7E00B2A2F3 /* TicketLiquidatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5393CE91FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift */,
+				D5393CEB1FE30E7E00B2A2F3 /* Info.plist */,
+			);
+			path = TicketLiquidatorTests;
+			sourceTree = "<group>";
+		};
+		D5393CF31FE30E7E00B2A2F3 /* TicketLiquidatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5393CF41FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift */,
+				D5393CF61FE30E7E00B2A2F3 /* Info.plist */,
+			);
+			path = TicketLiquidatorUITests;
+			sourceTree = "<group>";
+		};
+		D5393D1A1FE30F6600B2A2F3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */,
+				D5393CDD1FE30E7E00B2A2F3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D5DE8A9B1FE3495E004DADE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5DE8A911FE34927004DADE9 /* TicketLiquidatorViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D5DE8A9C1FE34965004DADE9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D5DE8A9D1FE3496D004DADE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */,
+				D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECF0325E7B4B5BADB532E626 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C04D9C272A68E7C933029E9A /* Pods-TicketLiquidator.debug.xcconfig */,
+				B97FD256BA0E3FFC4903F545 /* Pods-TicketLiquidator.release.xcconfig */,
+				4001648EBBFCB5560F81C1C3 /* Pods-TicketLiquidatorTests.debug.xcconfig */,
+				A5CC265C9B41AB55F99B969F /* Pods-TicketLiquidatorTests.release.xcconfig */,
+				B9A4A3CE8A97277A0EC5E3EC /* Pods-TicketLiquidatorUITests.debug.xcconfig */,
+				ADD65D715897D87CEE8C0B26 /* Pods-TicketLiquidatorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5393CCD1FE30E7E00B2A2F3 /* TicketLiquidator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5393CF91FE30E7E00B2A2F3 /* Build configuration list for PBXNativeTarget "TicketLiquidator" */;
+			buildPhases = (
+				30116A68D3BEA6DB28D61F29 /* [CP] Check Pods Manifest.lock */,
+				D5393CCA1FE30E7E00B2A2F3 /* Sources */,
+				D5393CCB1FE30E7E00B2A2F3 /* Frameworks */,
+				D5393CCC1FE30E7E00B2A2F3 /* Resources */,
+				F8F0E1F6CEB06A03C51E6E3C /* [CP] Embed Pods Frameworks */,
+				2BD13ACB62F5D0CD8651F379 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicketLiquidator;
+			productName = TicketLiquidator;
+			productReference = D5393CCE1FE30E7E00B2A2F3 /* TicketLiquidator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5393CE41FE30E7E00B2A2F3 /* TicketLiquidatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5393CFC1FE30E7E00B2A2F3 /* Build configuration list for PBXNativeTarget "TicketLiquidatorTests" */;
+			buildPhases = (
+				7F181BE57C6171142A12F1BD /* [CP] Check Pods Manifest.lock */,
+				D5393CE11FE30E7E00B2A2F3 /* Sources */,
+				D5393CE21FE30E7E00B2A2F3 /* Frameworks */,
+				D5393CE31FE30E7E00B2A2F3 /* Resources */,
+				66FBE242DC633BBF16AAA2F9 /* [CP] Embed Pods Frameworks */,
+				838506137452D86A74002332 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5393CE71FE30E7E00B2A2F3 /* PBXTargetDependency */,
+			);
+			name = TicketLiquidatorTests;
+			productName = TicketLiquidatorTests;
+			productReference = D5393CE51FE30E7E00B2A2F3 /* TicketLiquidatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5393CEF1FE30E7E00B2A2F3 /* TicketLiquidatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5393CFF1FE30E7E00B2A2F3 /* Build configuration list for PBXNativeTarget "TicketLiquidatorUITests" */;
+			buildPhases = (
+				7BECD0402A0C2E5FAC871FE6 /* [CP] Check Pods Manifest.lock */,
+				D5393CEC1FE30E7E00B2A2F3 /* Sources */,
+				D5393CED1FE30E7E00B2A2F3 /* Frameworks */,
+				D5393CEE1FE30E7E00B2A2F3 /* Resources */,
+				3920E203B2532D5DE5D4F411 /* [CP] Embed Pods Frameworks */,
+				22FBBCF70B477BEADBDB1D80 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5393CF21FE30E7E00B2A2F3 /* PBXTargetDependency */,
+			);
+			name = TicketLiquidatorUITests;
+			productName = TicketLiquidatorUITests;
+			productReference = D5393CF01FE30E7E00B2A2F3 /* TicketLiquidatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5393CC61FE30E7D00B2A2F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Luke Solomon";
+				TargetAttributes = {
+					D5393CCD1FE30E7E00B2A2F3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D5393CE41FE30E7E00B2A2F3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5393CCD1FE30E7E00B2A2F3;
+					};
+					D5393CEF1FE30E7E00B2A2F3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D5393CCD1FE30E7E00B2A2F3;
+					};
+				};
+			};
+			buildConfigurationList = D5393CC91FE30E7D00B2A2F3 /* Build configuration list for PBXProject "TicketLiquidator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5393CC51FE30E7D00B2A2F3;
+			productRefGroup = D5393CCF1FE30E7E00B2A2F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5393CCD1FE30E7E00B2A2F3 /* TicketLiquidator */,
+				D5393CE41FE30E7E00B2A2F3 /* TicketLiquidatorTests */,
+				D5393CEF1FE30E7E00B2A2F3 /* TicketLiquidatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5393CCC1FE30E7E00B2A2F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5393CDF1FE30E7E00B2A2F3 /* LaunchScreen.storyboard in Resources */,
+				D5393CDC1FE30E7E00B2A2F3 /* Assets.xcassets in Resources */,
+				D5393CD71FE30E7E00B2A2F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5393CE31FE30E7E00B2A2F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5393CEE1FE30E7E00B2A2F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22FBBCF70B477BEADBDB1D80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidatorUITests/Pods-TicketLiquidatorUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BD13ACB62F5D0CD8651F379 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30116A68D3BEA6DB28D61F29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicketLiquidator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3920E203B2532D5DE5D4F411 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidatorUITests/Pods-TicketLiquidatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66FBE242DC633BBF16AAA2F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidatorTests/Pods-TicketLiquidatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BECD0402A0C2E5FAC871FE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicketLiquidatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F181BE57C6171142A12F1BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicketLiquidatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		838506137452D86A74002332 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidatorTests/Pods-TicketLiquidatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8F0E1F6CEB06A03C51E6E3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5393CCA1FE30E7E00B2A2F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */,
+				D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */,
+				D5DE8A931FE34927004DADE9 /* TicketLiquidatorViewController.swift in Sources */,
+				D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */,
+				D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5393CE11FE30E7E00B2A2F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5393CEA1FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift in Sources */,
+				D5DE8AA21FE34CE0004DADE9 /* UIColor+Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5393CEC1FE30E7E00B2A2F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5393CF51FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift in Sources */,
+				D5DE8AA31FE34CE0004DADE9 /* UIColor+Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5393CE71FE30E7E00B2A2F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5393CCD1FE30E7E00B2A2F3 /* TicketLiquidator */;
+			targetProxy = D5393CE61FE30E7E00B2A2F3 /* PBXContainerItemProxy */;
+		};
+		D5393CF21FE30E7E00B2A2F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5393CCD1FE30E7E00B2A2F3 /* TicketLiquidator */;
+			targetProxy = D5393CF11FE30E7E00B2A2F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5393CD61FE30E7E00B2A2F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5393CDD1FE30E7E00B2A2F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5393CDE1FE30E7E00B2A2F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5393CF71FE30E7E00B2A2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5393CF81FE30E7E00B2A2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5393CFA1FE30E7E00B2A2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04D9C272A68E7C933029E9A /* Pods-TicketLiquidator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
+				INFOPLIST_FILE = TicketLiquidator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D5393CFB1FE30E7E00B2A2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B97FD256BA0E3FFC4903F545 /* Pods-TicketLiquidator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
+				INFOPLIST_FILE = TicketLiquidator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D5393CFD1FE30E7E00B2A2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4001648EBBFCB5560F81C1C3 /* Pods-TicketLiquidatorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
+				INFOPLIST_FILE = TicketLiquidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicketLiquidator.app/TicketLiquidator";
+			};
+			name = Debug;
+		};
+		D5393CFE1FE30E7E00B2A2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5CC265C9B41AB55F99B969F /* Pods-TicketLiquidatorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
+				INFOPLIST_FILE = TicketLiquidatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicketLiquidator.app/TicketLiquidator";
+			};
+			name = Release;
+		};
+		D5393D001FE30E7E00B2A2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9A4A3CE8A97277A0EC5E3EC /* Pods-TicketLiquidatorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
+				INFOPLIST_FILE = TicketLiquidatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TicketLiquidator;
+			};
+			name = Debug;
+		};
+		D5393D011FE30E7E00B2A2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADD65D715897D87CEE8C0B26 /* Pods-TicketLiquidatorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
+				INFOPLIST_FILE = TicketLiquidatorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TicketLiquidator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5393CC91FE30E7D00B2A2F3 /* Build configuration list for PBXProject "TicketLiquidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5393CF71FE30E7E00B2A2F3 /* Debug */,
+				D5393CF81FE30E7E00B2A2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5393CF91FE30E7E00B2A2F3 /* Build configuration list for PBXNativeTarget "TicketLiquidator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5393CFA1FE30E7E00B2A2F3 /* Debug */,
+				D5393CFB1FE30E7E00B2A2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5393CFC1FE30E7E00B2A2F3 /* Build configuration list for PBXNativeTarget "TicketLiquidatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5393CFD1FE30E7E00B2A2F3 /* Debug */,
+				D5393CFE1FE30E7E00B2A2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5393CFF1FE30E7E00B2A2F3 /* Build configuration list for PBXNativeTarget "TicketLiquidatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5393D001FE30E7E00B2A2F3 /* Debug */,
+				D5393D011FE30E7E00B2A2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5393CC61FE30E7D00B2A2F3 /* Project object */;
+}
