@@ -9,6 +9,8 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var eventTitleLabel: UILabel!
+    
     @IBOutlet fileprivate weak var eventCollectionView: UICollectionView!
     
 }
