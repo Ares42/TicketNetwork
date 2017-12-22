@@ -12,6 +12,7 @@ class TicketLiquidatorViewController: UIViewController {
     // pragma mark - IBOutlets
     @IBOutlet weak var eventTableView: UITableView!
     
+    
     // pragma mark - Properties
     //let model: [[UIColor]] = generateRandomData()
     let model: [(String, [UIImage])] = generateUsefulData()
@@ -21,6 +22,11 @@ class TicketLiquidatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func editingChanged(_ sender: Any) {
+        
+    }
+    
 }
 
 extension TicketLiquidatorViewController: UITableViewDataSource, UITableViewDelegate {
@@ -78,5 +84,20 @@ extension TicketLiquidatorViewController: UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
     
+    }
+}
+
+extension TicketLiquidatorViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
     }
 }

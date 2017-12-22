@@ -20,19 +20,19 @@ func generateRandomData() -> [[UIColor]] {
 func generateUsefulData() -> [(String, [UIImage])] {
     
     let usefulData = [("Concerts", [UIImage.init(imageLiteralResourceName: "ed sheeran"),
-                                   UIImage.init(imageLiteralResourceName: "u2"),
-                                   UIImage.init(imageLiteralResourceName: "pitbull"),
-                                   UIImage.init(imageLiteralResourceName: "transsiberian")]),
+                                    UIImage.init(imageLiteralResourceName: "u2"),
+                                    UIImage.init(imageLiteralResourceName: "pitbull"),
+                                    UIImage.init(imageLiteralResourceName: "transsiberian")]),
                       
                       ("Sports",   [UIImage.init(imageLiteralResourceName: "football"),
-                                   UIImage.init(imageLiteralResourceName: "hockey")]),
+                                    UIImage.init(imageLiteralResourceName: "hockey")]),
                       
                       ("Theatre",  [UIImage.init(imageLiteralResourceName: "hamilton"),
-                                   UIImage.init(imageLiteralResourceName: "jersey boys"),
-                                   UIImage.init(imageLiteralResourceName: "frozen")]),
+                                    UIImage.init(imageLiteralResourceName: "jersey boys"),
+                                    UIImage.init(imageLiteralResourceName: "frozen")]),
                       
                       ("Events",   [UIImage.init(imageLiteralResourceName: "jesus"),
-                                   UIImage.init(imageLiteralResourceName: "kevin hart")])
+                                    UIImage.init(imageLiteralResourceName: "kevin hart")])
                       ]
     
     return usefulData
