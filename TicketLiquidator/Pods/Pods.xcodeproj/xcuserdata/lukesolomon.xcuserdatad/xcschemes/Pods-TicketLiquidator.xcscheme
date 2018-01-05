@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48E7413D3AF3C144989F843AE2D56D8D"
+               BlueprintIdentifier = "584C75F0B2BA50E7B08D650D92C28728"
                BuildableName = "Pods_TicketLiquidator.framework"
                BlueprintName = "Pods-TicketLiquidator"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "48E7413D3AF3C144989F843AE2D56D8D"
+            BlueprintIdentifier = "584C75F0B2BA50E7B08D650D92C28728"
             BuildableName = "Pods_TicketLiquidator.framework"
             BlueprintName = "Pods-TicketLiquidator"
             ReferencedContainer = "container:Pods.xcodeproj">

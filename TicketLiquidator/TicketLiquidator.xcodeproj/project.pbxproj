@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		95468028221E84DBE1616A80 /* Pods_TicketLiquidator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6072B8539ED688B7378F118 /* Pods_TicketLiquidator.framework */; };
 		A17F97A865347A89067C200D /* Pods_TicketLiquidatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C24BE1DD90FD2C0FE9FB57 /* Pods_TicketLiquidatorUITests.framework */; };
+		D51463941FF459C600136238 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463931FF459C600136238 /* Event.swift */; };
+		D51463981FF459E500136238 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463971FF459E500136238 /* NetworkService.swift */; };
+		D514639A1FF4633D00136238 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463991FF4633D00136238 /* Category.swift */; };
+		D53083C41FFBF2F60093DF10 /* ObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53083C31FFBF2F60093DF10 /* ObjectService.swift */; };
 		D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */; };
 		D5393CD71FE30E7E00B2A2F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */; };
 		D5393CDC1FE30E7E00B2A2F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5393CDB1FE30E7E00B2A2F3 /* Assets.xcassets */; };
 		D5393CDF1FE30E7E00B2A2F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5393CDD1FE30E7E00B2A2F3 /* LaunchScreen.storyboard */; };
 		D5393CEA1FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CE91FE30E7E00B2A2F3 /* TicketLiquidatorTests.swift */; };
 		D5393CF51FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CF41FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift */; };
-		D5DE8A931FE34927004DADE9 /* TicketLiquidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A911FE34927004DADE9 /* TicketLiquidatorViewController.swift */; };
+		D566B61F1FF538FE00C4D790 /* TicketLiquidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566B61E1FF538FE00C4D790 /* TicketLiquidatorViewController.swift */; };
+		D566B6211FF6A8CB00C4D790 /* CategoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566B6201FF6A8CB00C4D790 /* CategoryHelper.swift */; };
 		D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
 		D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */; };
 		D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */; };
@@ -50,6 +55,10 @@
 		B97FD256BA0E3FFC4903F545 /* Pods-TicketLiquidator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidator.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator.release.xcconfig"; sourceTree = "<group>"; };
 		B9A4A3CE8A97277A0EC5E3EC /* Pods-TicketLiquidatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidatorUITests/Pods-TicketLiquidatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C04D9C272A68E7C933029E9A /* Pods-TicketLiquidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator.debug.xcconfig"; sourceTree = "<group>"; };
+		D51463931FF459C600136238 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = TicketLiquidator/Models/Event.swift; sourceTree = SOURCE_ROOT; };
+		D51463971FF459E500136238 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = TicketLiquidator/Services/NetworkService.swift; sourceTree = SOURCE_ROOT; };
+		D51463991FF4633D00136238 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Category.swift; path = TicketLiquidator/Models/Category.swift; sourceTree = SOURCE_ROOT; };
+		D53083C31FFBF2F60093DF10 /* ObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectService.swift; path = TicketLiquidator/Services/ObjectService.swift; sourceTree = SOURCE_ROOT; };
 		D5393CCE1FE30E7E00B2A2F3 /* TicketLiquidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketLiquidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5393CD61FE30E7E00B2A2F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +71,8 @@
 		D5393CF01FE30E7E00B2A2F3 /* TicketLiquidatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketLiquidatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5393CF41FE30E7E00B2A2F3 /* TicketLiquidatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorUITests.swift; sourceTree = "<group>"; };
 		D5393CF61FE30E7E00B2A2F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5DE8A911FE34927004DADE9 /* TicketLiquidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorViewController.swift; sourceTree = "<group>"; };
+		D566B61E1FF538FE00C4D790 /* TicketLiquidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorViewController.swift; sourceTree = "<group>"; };
+		D566B6201FF6A8CB00C4D790 /* CategoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHelper.swift; sourceTree = "<group>"; };
 		D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
 		D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -107,6 +117,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D51463921FF43D6B00136238 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D51463991FF4633D00136238 /* Category.swift */,
+				D51463931FF459C600136238 /* Event.swift */,
+			);
+			name = Models;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		D5393CC51FE30E7D00B2A2F3 = {
 			isa = PBXGroup;
 			children = (
@@ -132,9 +152,11 @@
 		D5393CD01FE30E7E00B2A2F3 /* TicketLiquidator */ = {
 			isa = PBXGroup;
 			children = (
+				D51463921FF43D6B00136238 /* Models */,
 				D5DE8A9B1FE3495E004DADE9 /* Controllers */,
 				D5DE8A9C1FE34965004DADE9 /* Helpers */,
 				D5DE8A9D1FE3496D004DADE9 /* Views */,
+				D58D970A1FF428AE002D3832 /* Services */,
 				D5393D1A1FE30F6600B2A2F3 /* Storyboards */,
 				D5393CDB1FE30E7E00B2A2F3 /* Assets.xcassets */,
 				D5393CE01FE30E7E00B2A2F3 /* Info.plist */,
@@ -170,10 +192,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D58D970A1FF428AE002D3832 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D51463971FF459E500136238 /* NetworkService.swift */,
+				D53083C31FFBF2F60093DF10 /* ObjectService.swift */,
+			);
+			name = Services;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D5DE8A9B1FE3495E004DADE9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5DE8A911FE34927004DADE9 /* TicketLiquidatorViewController.swift */,
+				D566B61E1FF538FE00C4D790 /* TicketLiquidatorViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -181,6 +213,7 @@
 		D5DE8A9C1FE34965004DADE9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D566B6201FF6A8CB00C4D790 /* CategoryHelper.swift */,
 				D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */,
 			);
 			path = Helpers;
@@ -482,9 +515,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,11 +538,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D566B6211FF6A8CB00C4D790 /* CategoryHelper.swift in Sources */,
+				D566B61F1FF538FE00C4D790 /* TicketLiquidatorViewController.swift in Sources */,
 				D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */,
 				D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */,
-				D5DE8A931FE34927004DADE9 /* TicketLiquidatorViewController.swift in Sources */,
 				D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */,
+				D51463941FF459C600136238 /* Event.swift in Sources */,
 				D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */,
+				D51463981FF459E500136238 /* NetworkService.swift in Sources */,
+				D53083C41FFBF2F60093DF10 /* ObjectService.swift in Sources */,
+				D514639A1FF4633D00136238 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +720,7 @@
 				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
 				INFOPLIST_FILE = TicketLiquidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidator;
+				PRODUCT_BUNDLE_IDENTIFIER = Solomon.Ticketr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,7 +736,7 @@
 				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
 				INFOPLIST_FILE = TicketLiquidator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = TicketNetwork.TicketLiquidator;
+				PRODUCT_BUNDLE_IDENTIFIER = Solomon.Ticketr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
