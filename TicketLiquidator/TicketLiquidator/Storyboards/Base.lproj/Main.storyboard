@@ -138,6 +138,7 @@
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jai-6Z-2wi">
                                 <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <gestureRecognizers/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -165,8 +166,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHd-xz-gVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2JW-hg-fHM"/>
             </objects>
-            <point key="canvasLocation" x="165.59999999999999" y="0.44977511244377816"/>
+            <point key="canvasLocation" x="132" y="1"/>
         </scene>
     </scenes>
 </document>

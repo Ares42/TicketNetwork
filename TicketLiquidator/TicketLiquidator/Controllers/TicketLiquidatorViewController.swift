@@ -6,22 +6,45 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 class TicketLiquidatorViewController: UIViewController {
     
     // pragma mark - IBOutlets
     @IBOutlet weak var eventTableView: UITableView!
     
-    
     // pragma mark - Properties
     //let model: [[UIColor]] = generateRandomData()
-    let model: [(String, [UIImage])] = generateUsefulData()
+    //varfa model: [(String, [UIImage])] = generateUsefulData()
     
+    var model = [Event]()
     var storedOffsets = [Int: CGFloat]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reUpdateTableView()
+        
+        
+        NetworkService.getEventsAsCorrectArray(completion: { (events) in
+            
+        })
     }
+    
+    func reUpdateTableView() {
+        NetworkService.getEvents(completion: { (events) in
+            self.model = events
+            self.eventTableView.reloadData()
+        })
+        
+        
+    }
+    
+    // When users tap search, load up new table view cotroller (gesture recogizer)
+    // As Each letter is typed, make a new request to the server
+    // When
     
     @IBAction func editingChanged(_ sender: Any) {
         
@@ -41,7 +64,7 @@ extension TicketLiquidatorViewController: UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventTableViewCell
         
-        cell.eventTitleLabel.text = model[indexPath.row].0
+        cell.eventTitleLabel.text = model[indexPath.row].name
         
         return cell
      }
@@ -67,37 +90,35 @@ extension TicketLiquidatorViewController: UICollectionViewDataSource, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       
-        return model[collectionView.tag].1.count
-        
+        return model.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
-
-        cell.imageView.image = model[collectionView.tag].1[indexPath.item]
-//        cell.label.text = model[collectionView.tag].1[indexPath.item]
+        
+//        cell.imageView.image = model[collectionView.tag].1[indexPath.item]
+        cell.title.text = model[indexPath.item].name
+        cell.subtitle.text = model[indexPath.item].datetext
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Collection view at row \(collectionView.tag) selected index path \(indexPath)")
-    
     }
 }
 
 extension TicketLiquidatorViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
+        
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-
+        
     }
 }
