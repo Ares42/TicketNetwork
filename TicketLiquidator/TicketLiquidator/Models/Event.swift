@@ -12,7 +12,7 @@ import SwiftyJSON
 struct Event {
     
     var name : String
-    var date : [String : JSON]
+    var date : [String : JSON] // must contain other date info if you're going to do it this way
     var datetime : String
     var datetext : String
     var timeZone : String

@@ -8,6 +8,8 @@
 
 import Foundation
 import Alamofire
+
+
 import SwiftyJSON
 
 
@@ -101,12 +103,11 @@ class NetworkService {
                         let category = results[i]["defaultCategory"]["ancestors"][1]["text"]["name"].stringValue
                         var event = Event.init(json: results[i])
                         
-                        if let dictt = dict[category] as? [String:[Event]] {
-                            dictt[category]?.append(event)
-                        } else {
-                            dictt[category] = [event]()
-
-                        }
+//                        if let dictt = dict[category] as? [String:[Event]] {
+//                            dictt[category]?.append(event)
+//                        } else {
+//                            dictt[category] = [event]()
+//                        }
                     }
                 }
 
@@ -118,24 +119,30 @@ class NetworkService {
         }
     }
     
+    static func getSearch(_ searchString:String, completion: @escaping ([Event]) -> Void) {
+        
+        Alamofire.request( "\(apiToContact)suggest?q\(searchString)", headers: headers).validate().responseJSON(){ response in
+            
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    var responseArray = [Event]()
+                    
+                    if let results = json["results"].array {
+                        for i in 0..<results.count {
+                            let event = Event.init(json: results[i])
+                            responseArray.append(event)
+                        }
+                    }
+                    
+                    
+                    completion(responseArray)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

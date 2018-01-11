@@ -16,10 +16,9 @@ class TicketLiquidatorViewController: UIViewController {
     
     // pragma mark - Properties
     //let model: [[UIColor]] = generateRandomData()
-//    varfa model: [(String, [UIImage])] = generateUsefulData()
+    //varfa model: [(String, [UIImage])] = generateUsefulData()
     
     var model = [Event]()
-    
     var storedOffsets = [Int: CGFloat]()
     
     
@@ -42,6 +41,10 @@ class TicketLiquidatorViewController: UIViewController {
         
         
     }
+    
+    // When users tap search, load up new table view cotroller (gesture recogizer)
+    // As Each letter is typed, make a new request to the server
+    // When
     
     @IBAction func editingChanged(_ sender: Any) {
         
