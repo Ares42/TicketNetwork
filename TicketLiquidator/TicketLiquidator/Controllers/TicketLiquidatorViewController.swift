@@ -13,6 +13,7 @@ class TicketLiquidatorViewController: UIViewController {
     
     // pragma mark - IBOutlets
     @IBOutlet weak var eventTableView: UITableView!
+    @IBOutlet weak var searchField: UITextField!
     
     // pragma mark - Properties
     //let model: [[UIColor]] = generateRandomData()
@@ -42,11 +43,27 @@ class TicketLiquidatorViewController: UIViewController {
         
     }
     
+    @IBAction func editingChanged(_ sender: Any) {
+
+        //        let searchBarEncodedText = textField.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
+        //
+        
+        if let text = self.searchField.text {
+            NetworkService.getSearch(text, completion: { (responseArray) -> Void in
+//                self.tableView.reloadData()
+            })
+        }
+        
+        
+    }
     // When users tap search, load up new table view cotroller (gesture recogizer)
     // As Each letter is typed, make a new request to the server
     // When
     
-    @IBAction func editingChanged(_ sender: Any) {
+    
+    @objc func editingCancelled (view: UIView) {
+        view.removeFromSuperview()
+        self.searchField.resignFirstResponder()
         
     }
     
@@ -109,8 +126,23 @@ extension TicketLiquidatorViewController: UICollectionViewDataSource, UICollecti
 }
 
 extension TicketLiquidatorViewController: UITextFieldDelegate {
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        let viewRect = CGRect.init(x: 0, y: self.searchField.frame.minY , width: self.view.frame.width, height: self.view.frame.height/2)
+        let resultsView = UIView.init(frame: viewRect)
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(UIInputViewController.dismissKeyboard))
+        self.view.addGestureRecognizer(tap)
+        
+        let resultsTableView = UITableView.init(frame: resultsView.frame)
+        
+        
+        resultsView.addSubview(resultsTableView)
+//        resultsTableViewController.view.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
+//        resultsTableViewController.view.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
+//        resultsTableViewController.view.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
+//        resultsTableViewController.view.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
+        self.view.addSubview(resultsView)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -120,5 +152,10 @@ extension TicketLiquidatorViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        //        self.dismissKeyboard()
+        return true
     }
 }

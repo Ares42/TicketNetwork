@@ -24,6 +24,8 @@
 		D5737AB62006C2A000582D4D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737AB52006C2A000582D4D /* SearchTableViewController.swift */; };
 		D5737AB82006D75700582D4D /* SearchEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5737AB72006D75700582D4D /* SearchEventCell.xib */; };
 		D5737ABA2006D88200582D4D /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737AB92006D88200582D4D /* SearchCell.swift */; };
+		D5737ABC2007D85D00582D4D /* SearchTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5737ABB2007D85D00582D4D /* SearchTableView.xib */; };
+		D5737ABE2007F62000582D4D /* SearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737ABD2007F62000582D4D /* SearchTableView.swift */; };
 		D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
 		D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */; };
 		D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */; };
@@ -79,6 +81,8 @@
 		D5737AB52006C2A000582D4D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D5737AB72006D75700582D4D /* SearchEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchEventCell.xib; path = TicketLiquidator/Storyboards/SearchEventCell.xib; sourceTree = SOURCE_ROOT; };
 		D5737AB92006D88200582D4D /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		D5737ABB2007D85D00582D4D /* SearchTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableView.xib; sourceTree = "<group>"; };
+		D5737ABD2007F62000582D4D /* SearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableView.swift; sourceTree = "<group>"; };
 		D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
 		D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 		D5393D1A1FE30F6600B2A2F3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				D5737ABB2007D85D00582D4D /* SearchTableView.xib */,
 				D5737AB72006D75700582D4D /* SearchEventCell.xib */,
 				D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */,
 				D5393CDD1FE30E7E00B2A2F3 /* LaunchScreen.storyboard */,
@@ -230,6 +235,7 @@
 		D5DE8A9D1FE3496D004DADE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5737ABD2007F62000582D4D /* SearchTableView.swift */,
 				D5737AB92006D88200582D4D /* SearchCell.swift */,
 				D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */,
 				D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */,
@@ -367,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5737AB82006D75700582D4D /* SearchEventCell.xib in Resources */,
+				D5737ABC2007D85D00582D4D /* SearchTableView.xib in Resources */,
 				D5393CDF1FE30E7E00B2A2F3 /* LaunchScreen.storyboard in Resources */,
 				D5393CDC1FE30E7E00B2A2F3 /* Assets.xcassets in Resources */,
 				D5393CD71FE30E7E00B2A2F3 /* Main.storyboard in Resources */,
@@ -560,6 +567,7 @@
 				D5737ABA2006D88200582D4D /* SearchCell.swift in Sources */,
 				D53083C41FFBF2F60093DF10 /* ObjectService.swift in Sources */,
 				D514639A1FF4633D00136238 /* Category.swift in Sources */,
+				D5737ABE2007F62000582D4D /* SearchTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
