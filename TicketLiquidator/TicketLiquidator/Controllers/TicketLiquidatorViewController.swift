@@ -16,50 +16,51 @@ class TicketLiquidatorViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
     
     // pragma mark - Properties
-    //let model: [[UIColor]] = generateRandomData()
-    //varfa model: [(String, [UIImage])] = generateUsefulData()
+    // let model: [[UIColor]] = generateRandomData()
+    // varfa model: [(String, [UIImage])] = generateUsefulData()
     
     var model = [Event]()
     var storedOffsets = [Int: CGFloat]()
-    
-    
+
+    let resultsView = UIView()
+
+    // pragma mark - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         reUpdateTableView()
-        
-        
-        NetworkService.getEventsAsCorrectArray(completion: { (events) in
-            
-        })
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        resultsView.frame = CGRect.init(x: 5, y: searchField.layer.bounds.minY + 45, width: self.view.frame.width - 20, height: self.view.frame.height / 2)
+        self.view.addSubview(resultsView)
+        resultsView.isHidden = true
+    }
+    
+    // pragma mark - Other Functions
     func reUpdateTableView() {
         NetworkService.getEvents(completion: { (events) in
             self.model = events
             self.eventTableView.reloadData()
         })
-        
-        
     }
     
+    
+    // pragma mark - IBActions
     @IBAction func editingChanged(_ sender: Any) {
-
-        //        let searchBarEncodedText = textField.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
-        //
+        
+        //let searchBarEncodedText = textField.text!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
         
         if let text = self.searchField.text {
             NetworkService.getSearch(text, completion: { (responseArray) -> Void in
-//                self.tableView.reloadData()
+                // self.tableView.reloadData()
             })
         }
         
         
     }
-    // When users tap search, load up new table view cotroller (gesture recogizer)
-    // As Each letter is typed, make a new request to the server
-    // When
-    
     
     @objc func editingCancelled (view: UIView) {
         view.removeFromSuperview()
@@ -69,6 +70,7 @@ class TicketLiquidatorViewController: UIViewController {
     
 }
 
+// pragma mark - TableView
 extension TicketLiquidatorViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -100,6 +102,7 @@ extension TicketLiquidatorViewController: UITableViewDataSource, UITableViewDele
     }
 }
 
+// pragma mark - CollectionView
 extension TicketLiquidatorViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -114,6 +117,7 @@ extension TicketLiquidatorViewController: UICollectionViewDataSource, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
         
 //        cell.imageView.image = model[collectionView.tag].1[indexPath.item]
+        
         cell.title.text = model[indexPath.item].name
         cell.subtitle.text = model[indexPath.item].datetext
         
@@ -125,24 +129,22 @@ extension TicketLiquidatorViewController: UICollectionViewDataSource, UICollecti
     }
 }
 
+// pragma mark - TextFieldDelegate
 extension TicketLiquidatorViewController: UITextFieldDelegate {
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        let viewRect = CGRect.init(x: 0, y: self.searchField.frame.minY , width: self.view.frame.width, height: self.view.frame.height/2)
-        let resultsView = UIView.init(frame: viewRect)
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(UIInputViewController.dismissKeyboard))
-        self.view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(UIInputViewController.dismissKeyboard))
+//        self.view.addGestureRecognizer(tap)
         
         let resultsTableView = UITableView.init(frame: resultsView.frame)
-        
-        
+        resultsTableView.layer.borderWidth = 2.0
+        resultsTableView.layer.borderColor = UIColor.black.cgColor
         resultsView.addSubview(resultsTableView)
-//        resultsTableViewController.view.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor).isActive = true
-//        resultsTableViewController.view.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor).isActive = true
-//        resultsTableViewController.view.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
-//        resultsTableViewController.view.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor).isActive = true
-        self.view.addSubview(resultsView)
+        
+        UIView.animate(withDuration: 2) {
+            self.resultsView.isHidden = false
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
