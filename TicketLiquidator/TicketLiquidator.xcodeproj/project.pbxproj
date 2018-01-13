@@ -26,7 +26,6 @@
 		D5737ABC2007D85D00582D4D /* SearchTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5737ABB2007D85D00582D4D /* SearchTableView.xib */; };
 		D5737ABE2007F62000582D4D /* SearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737ABD2007F62000582D4D /* SearchTableView.swift */; };
 		D5737AC02009600900582D4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737ABF2009600900582D4D /* SearchViewController.swift */; };
-		D5C5BC472009B1890059E057 /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C5BC462009B1890059E057 /* SearchCategory.swift */; };
 		D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
 		D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */; };
 		D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */; };
@@ -84,7 +83,6 @@
 		D5737ABB2007D85D00582D4D /* SearchTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableView.xib; sourceTree = "<group>"; };
 		D5737ABD2007F62000582D4D /* SearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableView.swift; sourceTree = "<group>"; };
 		D5737ABF2009600900582D4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		D5C5BC462009B1890059E057 /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchCategory.swift; path = TicketLiquidator/Models/SearchCategory.swift; sourceTree = SOURCE_ROOT; };
 		D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
 		D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 		D51463921FF43D6B00136238 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D5C5BC462009B1890059E057 /* SearchCategory.swift */,
 				D51463991FF4633D00136238 /* TL_Category.swift */,
 				D51463931FF459C600136238 /* Event.swift */,
 			);
@@ -565,7 +562,6 @@
 				D51463941FF459C600136238 /* Event.swift in Sources */,
 				D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */,
 				D51463981FF459E500136238 /* NetworkService.swift in Sources */,
-				D5C5BC472009B1890059E057 /* SearchCategory.swift in Sources */,
 				D5737AC02009600900582D4D /* SearchViewController.swift in Sources */,
 				D5737AB62006C2A000582D4D /* SearchTableViewController.swift in Sources */,
 				D5737ABA2006D88200582D4D /* SearchCell.swift in Sources */,

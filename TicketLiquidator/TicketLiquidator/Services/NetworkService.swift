@@ -119,7 +119,7 @@ class NetworkService {
         }
     }
     
-    static func getSearch(_ searchString:String, completion: @escaping ([TL_Category]) -> Void) {
+    static func getSearch(_ searchString:String, completion: @escaping ([SearchEvent]) -> Void) {
         
         Alamofire.request( "\(apiToContact)suggest?q=\(searchString)&eventsRequested=10&performersRequested=10&venuesRequested=10&citiesRequested=10", headers: headers).validate().responseJSON() { response in
             
@@ -127,12 +127,12 @@ class NetworkService {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    var responseArray = [TL_Category]()
+                    var responseArray = [SearchEvent]()
                     
                     if let results = json["events"]["results"].array {
                         for i in 0..<results.count {
-                            let category = TL_Category.init(json: results[i])
-                            responseArray.append(category)
+                            let event = SearchEvent.init(json: results[i])
+                            responseArray.append(event)
                         }
                     }
                     

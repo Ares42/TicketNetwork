@@ -33,16 +33,14 @@ struct Event {
         
         
     }
-    
-    init(name:String, datetext:String) {
-        self.name = name
-        self.datetime = ""
-        self.datetext = datetext
-        self.timeZone = ""
-        self.latitude = 0
-        self.longitude = 0
-        self.lowPrice = 0
-    }
-    
+}
 
+struct SearchEvent {
+    var name : String
+    var date : String
+
+    init(json: JSON) {
+        self.name = json["name"].stringValue
+        self.date = json["date"].stringValue
+    }
 }
