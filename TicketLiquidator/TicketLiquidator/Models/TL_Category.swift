@@ -1,5 +1,5 @@
 //
-//  Category.swift
+//  TL_Category.swift
 //  TicketLiquidator
 //
 //  Created by Luke Solomon on 12/27/17.
@@ -9,8 +9,10 @@
 import Foundation
 import SwiftyJSON
 
-class Category {
+class TL_Category {
     var eventArray:[Event] = [Event]()
+    var title:String
+    
     
     init(json: JSON) {
         eventArray =  [Event]()
@@ -18,11 +20,14 @@ class Category {
         for (key, item) in json["results"] {
             eventArray.append(Event.init(json: item))
         }
-        
-        
+        self.title = ""
     }
     
-    init() {
-        eventArray = [Event]()
+    init(title: String, events:[Event]) {
+        self.eventArray = events
+        self.title = title
     }
+    
+    
+  
 }

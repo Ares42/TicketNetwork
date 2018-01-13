@@ -35,7 +35,7 @@ class SearchTableViewController: UITableViewController {
         var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SearchCell
         
         cell.titleLabel.text = searchResults[indexPath.row].name
-        cell.dateLabel.text = searchResults[indexPath.row].datetext
+//        cell.dateLabel.text = searchResults[indexPath.row].datetext
         
         return cell
     }

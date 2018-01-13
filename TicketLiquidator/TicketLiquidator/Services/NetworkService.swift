@@ -24,7 +24,7 @@ let headers: HTTPHeaders = [
 
 class NetworkService {
     
-    static func getCategories(_ completion: @escaping (Category) -> Void) {
+    static func getCategories(_ completion: @escaping (TL_Category) -> Void) {
         
         Alamofire.request(apiToContact + "categories/", headers: headers).validate().responseJSON(){ response in
             
@@ -34,7 +34,7 @@ class NetworkService {
                     
                     let json = JSON(value)
                     
-                    let results = Category.init(json: json)
+                    let results = TL_Category.init(json: json)
                     
                     completion(results)
                 }
@@ -119,20 +119,20 @@ class NetworkService {
         }
     }
     
-    static func getSearch(_ searchString:String, completion: @escaping ([Event]) -> Void) {
+    static func getSearch(_ searchString:String, completion: @escaping ([TL_Category]) -> Void) {
         
-        Alamofire.request( "\(apiToContact)suggest?q\(searchString)", headers: headers).validate().responseJSON(){ response in
+        Alamofire.request( "\(apiToContact)suggest?q=\(searchString)&eventsRequested=10&performersRequested=10&venuesRequested=10&citiesRequested=10", headers: headers).validate().responseJSON() { response in
             
             switch response.result {
             case .success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    var responseArray = [Event]()
+                    var responseArray = [TL_Category]()
                     
-                    if let results = json["results"].array {
+                    if let results = json["events"]["results"].array {
                         for i in 0..<results.count {
-                            let event = Event.init(json: results[i])
-                            responseArray.append(event)
+                            let category = TL_Category.init(json: results[i])
+                            responseArray.append(category)
                         }
                     }
                     

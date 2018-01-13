@@ -11,7 +11,7 @@ import UIKit
 class SearchCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+//    @IBOutlet weak var dateLabel: UILabel!
     
     
     override func awakeFromNib() {

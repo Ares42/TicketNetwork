@@ -11,7 +11,7 @@
 		A17F97A865347A89067C200D /* Pods_TicketLiquidatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8C24BE1DD90FD2C0FE9FB57 /* Pods_TicketLiquidatorUITests.framework */; };
 		D51463941FF459C600136238 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463931FF459C600136238 /* Event.swift */; };
 		D51463981FF459E500136238 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463971FF459E500136238 /* NetworkService.swift */; };
-		D514639A1FF4633D00136238 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463991FF4633D00136238 /* Category.swift */; };
+		D514639A1FF4633D00136238 /* TL_Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51463991FF4633D00136238 /* TL_Category.swift */; };
 		D53083C41FFBF2F60093DF10 /* ObjectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53083C31FFBF2F60093DF10 /* ObjectService.swift */; };
 		D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */; };
 		D5393CD71FE30E7E00B2A2F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */; };
@@ -22,10 +22,11 @@
 		D566B61F1FF538FE00C4D790 /* TicketLiquidatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566B61E1FF538FE00C4D790 /* TicketLiquidatorViewController.swift */; };
 		D566B6211FF6A8CB00C4D790 /* CategoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566B6201FF6A8CB00C4D790 /* CategoryHelper.swift */; };
 		D5737AB62006C2A000582D4D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737AB52006C2A000582D4D /* SearchTableViewController.swift */; };
-		D5737AB82006D75700582D4D /* SearchEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5737AB72006D75700582D4D /* SearchEventCell.xib */; };
 		D5737ABA2006D88200582D4D /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737AB92006D88200582D4D /* SearchCell.swift */; };
 		D5737ABC2007D85D00582D4D /* SearchTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5737ABB2007D85D00582D4D /* SearchTableView.xib */; };
 		D5737ABE2007F62000582D4D /* SearchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737ABD2007F62000582D4D /* SearchTableView.swift */; };
+		D5737AC02009600900582D4D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5737ABF2009600900582D4D /* SearchViewController.swift */; };
+		D5C5BC472009B1890059E057 /* SearchCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C5BC462009B1890059E057 /* SearchCategory.swift */; };
 		D5DE8A961FE3492E004DADE9 /* UIColor+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */; };
 		D5DE8A991FE34933004DADE9 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */; };
 		D5DE8A9A1FE34933004DADE9 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */; };
@@ -62,7 +63,7 @@
 		C04D9C272A68E7C933029E9A /* Pods-TicketLiquidator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketLiquidator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicketLiquidator/Pods-TicketLiquidator.debug.xcconfig"; sourceTree = "<group>"; };
 		D51463931FF459C600136238 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = TicketLiquidator/Models/Event.swift; sourceTree = SOURCE_ROOT; };
 		D51463971FF459E500136238 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = TicketLiquidator/Services/NetworkService.swift; sourceTree = SOURCE_ROOT; };
-		D51463991FF4633D00136238 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Category.swift; path = TicketLiquidator/Models/Category.swift; sourceTree = SOURCE_ROOT; };
+		D51463991FF4633D00136238 /* TL_Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TL_Category.swift; path = TicketLiquidator/Models/TL_Category.swift; sourceTree = SOURCE_ROOT; };
 		D53083C31FFBF2F60093DF10 /* ObjectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObjectService.swift; path = TicketLiquidator/Services/ObjectService.swift; sourceTree = SOURCE_ROOT; };
 		D5393CCE1FE30E7E00B2A2F3 /* TicketLiquidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketLiquidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5393CD11FE30E7E00B2A2F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,10 +80,11 @@
 		D566B61E1FF538FE00C4D790 /* TicketLiquidatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketLiquidatorViewController.swift; sourceTree = "<group>"; };
 		D566B6201FF6A8CB00C4D790 /* CategoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHelper.swift; sourceTree = "<group>"; };
 		D5737AB52006C2A000582D4D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		D5737AB72006D75700582D4D /* SearchEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchEventCell.xib; path = TicketLiquidator/Storyboards/SearchEventCell.xib; sourceTree = SOURCE_ROOT; };
 		D5737AB92006D88200582D4D /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		D5737ABB2007D85D00582D4D /* SearchTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableView.xib; sourceTree = "<group>"; };
 		D5737ABD2007F62000582D4D /* SearchTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableView.swift; sourceTree = "<group>"; };
+		D5737ABF2009600900582D4D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D5C5BC462009B1890059E057 /* SearchCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchCategory.swift; path = TicketLiquidator/Models/SearchCategory.swift; sourceTree = SOURCE_ROOT; };
 		D5DE8A951FE3492E004DADE9 /* UIColor+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Helper.swift"; sourceTree = "<group>"; };
 		D5DE8A971FE34933004DADE9 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5DE8A981FE34933004DADE9 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -130,7 +132,8 @@
 		D51463921FF43D6B00136238 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D51463991FF4633D00136238 /* Category.swift */,
+				D5C5BC462009B1890059E057 /* SearchCategory.swift */,
+				D51463991FF4633D00136238 /* TL_Category.swift */,
 				D51463931FF459C600136238 /* Event.swift */,
 			);
 			name = Models;
@@ -197,7 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				D5737ABB2007D85D00582D4D /* SearchTableView.xib */,
-				D5737AB72006D75700582D4D /* SearchEventCell.xib */,
 				D5393CD51FE30E7E00B2A2F3 /* Main.storyboard */,
 				D5393CDD1FE30E7E00B2A2F3 /* LaunchScreen.storyboard */,
 			);
@@ -217,6 +219,7 @@
 		D5DE8A9B1FE3495E004DADE9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5737ABF2009600900582D4D /* SearchViewController.swift */,
 				D5737AB52006C2A000582D4D /* SearchTableViewController.swift */,
 				D566B61E1FF538FE00C4D790 /* TicketLiquidatorViewController.swift */,
 			);
@@ -372,7 +375,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5737AB82006D75700582D4D /* SearchEventCell.xib in Resources */,
 				D5737ABC2007D85D00582D4D /* SearchTableView.xib in Resources */,
 				D5393CDF1FE30E7E00B2A2F3 /* LaunchScreen.storyboard in Resources */,
 				D5393CDC1FE30E7E00B2A2F3 /* Assets.xcassets in Resources */,
@@ -563,10 +565,12 @@
 				D51463941FF459C600136238 /* Event.swift in Sources */,
 				D5393CD21FE30E7E00B2A2F3 /* AppDelegate.swift in Sources */,
 				D51463981FF459E500136238 /* NetworkService.swift in Sources */,
+				D5C5BC472009B1890059E057 /* SearchCategory.swift in Sources */,
+				D5737AC02009600900582D4D /* SearchViewController.swift in Sources */,
 				D5737AB62006C2A000582D4D /* SearchTableViewController.swift in Sources */,
 				D5737ABA2006D88200582D4D /* SearchCell.swift in Sources */,
 				D53083C41FFBF2F60093DF10 /* ObjectService.swift in Sources */,
-				D514639A1FF4633D00136238 /* Category.swift in Sources */,
+				D514639A1FF4633D00136238 /* TL_Category.swift in Sources */,
 				D5737ABE2007F62000582D4D /* SearchTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
