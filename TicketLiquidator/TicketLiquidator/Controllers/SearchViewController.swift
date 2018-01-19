@@ -16,6 +16,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    let indicatorView = UIView()
+    
     // MARK: Properties
     var resultsArray = [SearchEvent]()
     var sectionHeaders = ["Concerts", "Theatre", "Sports", "Events"]
@@ -23,11 +25,25 @@ class SearchViewController: UIViewController {
     
     // MARK: View Lifecycle
     override func viewDidLoad() {
-        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.activityIndicator.isHidden = true
         
+        let indicatorFrame = CGRect.init(x: 10, y: self.view.frame.maxY, width: self.view.frame.width - 20, height: self.view.frame.height / 4)
+        self.indicatorView.frame = indicatorFrame
+        let label = UILabel.init(frame: indicatorView.layer.bounds)
+        label.text = "Tap above to search!"
+        label.textColor = UIColor.white
+        self.indicatorView.addSubview(label)
+        self.indicatorView.backgroundColor = UIColor.black
+        
+        UIView.animate(withDuration: 1.0) {
+            self.indicatorView.frame = CGRect.init(x: 10, y: self.searchField.frame.maxY, width: self.view.frame.width - 20, height: self.view.frame.height / 4)
+            
+            self.view.addSubview(self.indicatorView)
+        }
     }
     
     // MARK: IBActions
@@ -92,6 +108,9 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: TextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5) {
+            self.indicatorView.frame = CGRect.init(x: 10, y: self.view.frame.maxY, width: self.view.frame.width - 20, height: self.view.frame.height / 4)
+        }
         
     }
     

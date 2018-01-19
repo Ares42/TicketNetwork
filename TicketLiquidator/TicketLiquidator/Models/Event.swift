@@ -41,7 +41,15 @@ struct SearchResult {
     
     init(json: JSON) {
         self.category = json["defaultCategory"]["text"]["name"].stringValue
-        self.eventArray = json["results"]
+        
+       self.eventArray = json["results"].arrayValue.map({
+            (value: JSON) -> SearchEvent in
+        
+            var searchEvent = SearchEvent.init(json: value)
+            return searchEvent
+        })
+        
+//        self.eventArray = json["results"].arrayValue
     }
 }
 
