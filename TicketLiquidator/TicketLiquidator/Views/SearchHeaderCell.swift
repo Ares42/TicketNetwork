@@ -1,20 +1,19 @@
 //
-//  TableViewCell.swift
+//  SearchHeaderCell.swift
 //  TicketLiquidator
 //
-//  Created by Luke Solomon on 1/10/18.
+//  Created by Luke Solomon on 1/16/18.
 //  Copyright © 2018 Luke Solomon. All rights reserved.
 //
 
 import UIKit
 
-class SearchCell: UITableViewCell {
+class SearchHeaderCell: UITableViewCell {
     
-    // MARK
+    // MARK:IBOutlet
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
     
-    
+    // MARK:Functionss
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,3 +25,4 @@ class SearchCell: UITableViewCell {
     }
     
 }
+

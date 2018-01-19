@@ -35,6 +35,16 @@ struct Event {
     }
 }
 
+struct SearchResult {
+    var category : String
+    var eventArray : [SearchEvent]
+    
+    init(json: JSON) {
+        self.category = json["defaultCategory"]["text"]["name"].stringValue
+        self.eventArray = json["results"]
+    }
+}
+
 struct SearchEvent {
     var name : String
     var date : String
@@ -44,3 +54,5 @@ struct SearchEvent {
         self.date = json["date"].stringValue
     }
 }
+
+

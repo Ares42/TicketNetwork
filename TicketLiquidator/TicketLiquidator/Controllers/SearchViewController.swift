@@ -14,9 +14,11 @@ class SearchViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: Properties
     var resultsArray = [SearchEvent]()
+    var sectionHeaders = ["Concerts", "Theatre", "Sports", "Events"]
     
     
     // MARK: View Lifecycle
@@ -30,14 +32,25 @@ class SearchViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func editingChanged(_ sender: Any) {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        
+        updateTableView()
+    }
+    
+    func updateTableView() {
         if let text = self.searchField.text {
             guard let searchBarEncodedText = text.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlHostAllowed) else { return }
+            
             NetworkService.getSearch(searchBarEncodedText, completion: { (responseArray) -> Void in
                 self.resultsArray = responseArray
+                self.activityIndicator.isHidden = true
+                self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()
             })
         }
     }
+    
 }
 
 // MARK: TableView
@@ -51,12 +64,29 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as! SearchCell
         
-        cell.titleLabel.text = resultsArray[indexPath.row].name
-        
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchHeaderCell", for: indexPath) as! SearchHeaderCell
+            cell.titleLabel.text = sectionHeaders[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as! SearchCell
+            cell.titleLabel.text = resultsArray[indexPath.row].name
+            cell.dateLabel.text  = resultsArray[indexPath.row].date
+            return cell
+        }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.row == 0 {
+            return 40
+        } else {
+            return 100
+        }
+        
+    }
+    
 }
 
 // MARK: TextFieldDelegate
@@ -70,7 +100,7 @@ extension SearchViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
+
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {

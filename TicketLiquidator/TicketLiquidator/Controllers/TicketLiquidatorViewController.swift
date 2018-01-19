@@ -16,13 +16,11 @@ class TicketLiquidatorViewController: UIViewController {
     @IBOutlet weak var searchField: UITextField!
     
     // pragma mark - Properties
-    // let model: [[UIColor]] = generateRandomData()
-    // varfa model: [(String, [UIImage])] = generateUsefulData()
-    
     var model = [Event]()
     var storedOffsets = [Int: CGFloat]()
 
     let resultsView = UIView()
+    
 
     // pragma mark - View LifeCycle
     override func viewDidLoad() {
@@ -47,7 +45,6 @@ class TicketLiquidatorViewController: UIViewController {
         })
     }
     
-    
     // pragma mark - IBActions
     @IBAction func editingChanged(_ sender: Any) {
         
@@ -58,15 +55,15 @@ class TicketLiquidatorViewController: UIViewController {
                 // self.tableView.reloadData()
             })
         }
-        
-        
     }
     
     @objc func editingCancelled (view: UIView) {
         view.removeFromSuperview()
         self.searchField.resignFirstResponder()
-        
     }
+    
+    
+    
     
 }
 
@@ -81,7 +78,10 @@ extension TicketLiquidatorViewController: UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventTableViewCell
+        
+        
         
         cell.eventTitleLabel.text = model[indexPath.row].name
         

@@ -136,7 +136,6 @@ class NetworkService {
                         }
                     }
                     
-                    
                     completion(responseArray)
                 }
             case .failure(let error):
