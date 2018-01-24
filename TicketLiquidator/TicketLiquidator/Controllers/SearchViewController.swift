@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+fileprivate struct Constants
+{
+    static let inset: CGFloat = 10.0
+    static let indicatorHeight: CGFloat = 100
+}
+
 class SearchViewController: UIViewController {
     
     // MARK: IBOutlets
@@ -17,6 +23,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let indicatorView = UIView()
+    var topConstraint:NSLayoutConstraint = NSLayoutConstraint()
     
     // MARK: Properties
     var resultsArray = [SearchEvent]()
@@ -25,25 +32,14 @@ class SearchViewController: UIViewController {
     
     // MARK: View Lifecycle
     override func viewDidLoad() {
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.activityIndicator.isHidden = true
+
+        self.setupIndicatorView()
         
-        let indicatorFrame = CGRect.init(x: 10, y: self.view.frame.maxY, width: self.view.frame.width - 20, height: self.view.frame.height / 4)
-        self.indicatorView.frame = indicatorFrame
-        let label = UILabel.init(frame: indicatorView.layer.bounds)
-        label.text = "Tap above to search!"
-        label.textColor = UIColor.white
-        self.indicatorView.addSubview(label)
-        self.indicatorView.backgroundColor = UIColor.black
-        
-        UIView.animate(withDuration: 1.0) {
-            self.indicatorView.frame = CGRect.init(x: 10, y: self.searchField.frame.maxY, width: self.view.frame.width - 20, height: self.view.frame.height / 4)
-            
-            self.view.addSubview(self.indicatorView)
-        }
     }
     
     // MARK: IBActions
@@ -67,6 +63,54 @@ class SearchViewController: UIViewController {
         }
     }
     
+    func setupIndicatorView () {
+        self.view.addSubview(self.indicatorView)
+
+        let margins = view.layoutMarginsGuide
+        topConstraint = indicatorView.topAnchor.constraint(equalTo: margins.bottomAnchor, constant: Constants.inset)
+        
+        
+        //layout the view off of the screen
+        indicatorView.isHidden = true
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+        topConstraint.isActive = true
+        indicatorView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: Constants.inset).isActive = true
+        indicatorView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -Constants.inset).isActive = true
+        indicatorView.heightAnchor.constraint(equalToConstant: Constants.indicatorHeight).isActive = true
+        
+        indicatorView.layer.cornerRadius = 8
+        indicatorView.layer.masksToBounds = true
+        
+        let label = UILabel.init()
+        self.indicatorView.addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.topAnchor.constraint(equalTo: indicatorView.topAnchor, constant:Constants.inset).isActive = true
+        label.leadingAnchor.constraint(equalTo: indicatorView.leadingAnchor, constant:Constants.inset).isActive = true
+        label.trailingAnchor.constraint(equalTo: indicatorView.trailingAnchor, constant:-Constants.inset).isActive = true
+        label.bottomAnchor.constraint(equalTo: indicatorView.bottomAnchor, constant:-Constants.inset).isActive = true
+        
+        label.text = "Tap above to search!"
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.adjustsFontForContentSizeCategory = true
+
+        
+        self.indicatorView.backgroundColor = UIColor.darkGray
+
+        UIView.animate(withDuration:0.1, animations: {
+            self.view.layoutIfNeeded()
+        }) { (true) in
+            self.indicatorView.isHidden = false
+        }
+        
+        //animate into the view
+        topConstraint = self.indicatorView.topAnchor.constraint(equalTo: self.searchField.layoutMarginsGuide.bottomAnchor, constant: Constants.inset)
+        topConstraint.isActive = true
+        UIView.animate(withDuration: 1.0) {
+            self.view.layoutIfNeeded()
+        }
+    }
 }
 
 // MARK: TableView
@@ -89,6 +133,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as! SearchCell
             cell.titleLabel.text = resultsArray[indexPath.row].name
             cell.dateLabel.text  = resultsArray[indexPath.row].date
+            cell.imageView!.backgroundColor = UIColor.randomColor()
             return cell
         }
     }
@@ -103,13 +148,23 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "showEvent", sender: self)
+        
+    }
+    
 }
 
 // MARK: TextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            self.indicatorView.frame = CGRect.init(x: 10, y: self.view.frame.maxY, width: self.view.frame.width - 20, height: self.view.frame.height / 4)
+        topConstraint = self.indicatorView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor)
+        topConstraint.isActive = true
+        
+        UIView.animate(withDuration: 1.0) {
+            self.view.layoutIfNeeded()
         }
         
     }
@@ -119,10 +174,11 @@ extension SearchViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-
+        self.tableView.reloadData()
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return true
     }
+
 }
