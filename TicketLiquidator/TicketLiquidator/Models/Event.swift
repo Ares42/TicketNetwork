@@ -53,16 +53,19 @@ struct SearchResult {
     }
 }
 
-struct SearchEvent {
-    var name : String
-    var date : String
-    var eventID : String
+//struct SearchEvent {
 
-    init(json: JSON) {
-        self.name = json["name"].stringValue
-        self.date = json["date"].stringValue
-        self.eventID = json[].stringValue
-    }
-}
+//    init
+
+//    var name : String
+//    var date : String
+//    var eventID : String
+//
+//    init(json: JSON) {
+//        self.name = json["name"].stringValue
+//        self.date = json["date"].stringValue
+//        self.eventID = json[].stringValue
+//    }
+//}
 
 

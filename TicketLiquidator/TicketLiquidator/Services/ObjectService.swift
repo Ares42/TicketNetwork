@@ -30,7 +30,4 @@ class ObjectService {
         }
         return dict
     }
-    
-    
-    
 }

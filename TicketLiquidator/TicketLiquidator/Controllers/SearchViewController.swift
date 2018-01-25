@@ -111,6 +111,14 @@ class SearchViewController: UIViewController {
             self.view.layoutIfNeeded()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showEvent" {
+
+        }
+        
+    }
 }
 
 // MARK: TableView
@@ -124,7 +132,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchHeaderCell", for: indexPath) as! SearchHeaderCell
             cell.titleLabel.text = sectionHeaders[indexPath.row]
@@ -139,26 +146,23 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         if indexPath.row == 0 {
             return 40
         } else {
             return 100
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         performSegue(withIdentifier: "showEvent", sender: self)
         
+        
+        
     }
-    
 }
 
 // MARK: TextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         topConstraint = self.indicatorView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.bottomAnchor)
         topConstraint.isActive = true
